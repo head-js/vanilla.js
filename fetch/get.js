@@ -7,7 +7,7 @@ module.exports = function $get(endpoint, query) {
 
   var url = endpoint;
   if (keys.length > 0) {
-    url += '?' + keys.map(function () {
+    url += '?' + keys.map(function (k) {
       return esc(k) + '=' + esc(query[k]);
     }).join('&');
   }
