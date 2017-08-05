@@ -68,9 +68,9 @@ Vue.prototype.$emit = function $emit(event) {
 
 var $dispatcher = new Vue();
 
-$dispatcher.$on = $dispatcher.$on.bind(this);
-$dispatcher.$once = $dispatcher.$once.bind(this);
-$dispatcher.$off = $dispatcher.$off.bind(this);
-$dispatcher.$emit = $dispatcher.$emit.bind(this);
+$dispatcher.$on = $dispatcher.$on.bind($dispatcher);
+$dispatcher.$once = $dispatcher.$once.bind($dispatcher);
+$dispatcher.$off = $dispatcher.$off.bind($dispatcher);
+$dispatcher.$emit = $dispatcher.$emit.bind($dispatcher);
 
 module.exports = $dispatcher;
