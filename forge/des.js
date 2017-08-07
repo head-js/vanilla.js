@@ -8,7 +8,7 @@ module.exports = function des(text, secret) {
   cipher.start();
   cipher.update(forge.util.createBuffer(forge.util.encodeUtf8(text)));
   cipher.finish();
-  return forge.util.encode64((cipher.output.getBytes()));
+  return forge.util.encode64(cipher.output.getBytes());
 };
 
 // // DEBUG:
