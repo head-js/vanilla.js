@@ -1,6 +1,6 @@
 {
   "name": "vanilla.js",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Vanilla.js",
   "main": "index.js",
   "scripts": {
