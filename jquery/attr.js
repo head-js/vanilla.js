@@ -1,3 +1,7 @@
-module.exports = function $attr(el, key) {
-  return el.getAttribute(key);
+module.exports = function $attr(el, key, value) {
+  if (value) {
+    el.setAttribute(key, value);
+  } else {
+    return el.getAttribute(key);
+  }
 };

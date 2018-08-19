@@ -1,7 +1,7 @@
 {
   "name": "vanilla.js",
-  "version": "0.1.4",
-  "description": "Vanilla.js",
+  "version": "0.1.6",
+  "description": "vanilla.js",
   "main": "index.js",
   "scripts": {
     "test": "karma start"
