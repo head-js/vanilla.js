@@ -1,3 +1,5 @@
+var forge = require('node-forge');
+
 /**
  * @param text [String]
  * @return hash [String] e.g. 21232f297a57a5a743894a0e4a801fc3
