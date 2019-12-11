@@ -1,5 +1,9 @@
-module.exports = function $get(endpoint, query) {
+module.exports = function $get(endpoint, query, headers) {
   query = query || {};
+
+  headers = headers || {};
+  headers['Accept'] = 'application/json';
+  headers['Content-Type'] = 'application/json';
 
   var esc = encodeURIComponent;
 
@@ -19,9 +23,7 @@ module.exports = function $get(endpoint, query) {
 
   return fetch(url, {
     method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-    },
+    headers: headers,
     credentials: 'same-origin',
   })
   .then(function (resp) {
