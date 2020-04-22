@@ -1,4 +1,4 @@
-module.exports = function $get(endpoint, query) {
+module.exports = function $get(endpoint, query, headers) {
   query = query || {};
 
   var esc = encodeURIComponent;
@@ -21,6 +21,10 @@ module.exports = function $get(endpoint, query) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
+    if (headers) {
+      Object.keys(headers).forEach(k => xhr.setRequestHeader(k, headers[k]));
+    }
+
     xhr.onload = function () {
       // console.debug(xhr);
       var status = xhr.status;
