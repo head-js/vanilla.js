@@ -1,13 +1,13 @@
 const expect = require('chai').expect;
-const des = require('../forge/des');
+const encrypt = require('../forge/tdes/encrypt');
 const md5 = require('../forge/md5');
 const sha256 = require('../forge/sha256');
 
 
 describe('forge', function () {
-  it('des', function () {
+  it('tdes', function () {
     const SECRET = 'ABCDEFGHIJklmnopqrst1234';
-    expect(des('admin', SECRET)).to.be.equal('83HneVSbIIk=');
+    expect(encrypt('admin', SECRET)).to.be.equal('83HneVSbIIk=');
   });
 
   it('md5', function () {
