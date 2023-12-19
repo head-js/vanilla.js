@@ -5,7 +5,7 @@ vanilla.js
 
 2. forge
 
-3. dispatcher
+3. emitter
 
 
 CHANGELOG
@@ -20,3 +20,8 @@ v0.2.2
 --
 
 *BREAKING CHANGE:* `forge/rsa` -> `forge/rsa/encrypt`, `forge/des` -> `forge/tdes/encrypt`
+
+v0.2.10
+--
+
+*BREAKING CHANGE:* `dispatcher` -> `emitter`
