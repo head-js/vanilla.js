@@ -64,15 +64,15 @@ function _catch(resolve, reject) {
   };
 }
 
-function get(endpoint) {
+function del(endpoint) {
   var query = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var headers = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
   var url = _url(endpoint, query);
   var headers2 = _headers(headers);
   return new Promise(function (resolve, reject) {
-    fetch(url, _fetch('GET', headers2, options)).then(_then(resolve, reject))["catch"](_catch(resolve, reject));
+    fetch(url, _fetch('DELETE', headers2, options)).then(_then(resolve, reject))["catch"](_catch(resolve, reject));
   });
 }
 
-module.exports = get;
+module.exports = del;

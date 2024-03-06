@@ -26,8 +26,7 @@ function _url(endpoint, query) {
 
 function _headers(headers) {
   var headers2 = new Headers(headers);
-  headers2.append('Accept', 'application/json');
-  headers2.append('Content-Type', 'application/json');
+  headers2.append('Accept', 'text/plain');
   return headers2;
 }
 
@@ -39,20 +38,16 @@ function _fetch(method, headers, options) {
   };
 }
 
-function _then(resolve, reject) {
+function _thenText(resolve, reject) {
   return function (resp) {
     var status = resp.status;
     if (resp.ok) {
       resp.text().then(function (t) {
-        resolve(t ? JSON.parse(t) : {
-          status: status
-        });
+        resolve(t ? t : ''); // eslint-disable-line no-unneeded-ternary
       });
     } else {
       resp.text().then(function (t) {
-        reject(t ? JSON.parse(t) : {
-          status: status
-        });
+        reject(t ? t : "status: ".concat(status)); // eslint-disable-line no-unneeded-ternary
       });
     }
   };
@@ -64,15 +59,15 @@ function _catch(resolve, reject) {
   };
 }
 
-function get(endpoint) {
+function text(endpoint) {
   var query = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var headers = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
   var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
   var url = _url(endpoint, query);
   var headers2 = _headers(headers);
   return new Promise(function (resolve, reject) {
-    fetch(url, _fetch('GET', headers2, options)).then(_then(resolve, reject))["catch"](_catch(resolve, reject));
+    fetch(url, _fetch('GET', headers2, options)).then(_thenText(resolve, reject))["catch"](_catch(resolve, reject));
   });
 }
 
-module.exports = get;
+module.exports = text;
