@@ -13,6 +13,11 @@ vanilla.js
 CHANGELOG
 ==
 
+v0.3.0
+--
+
+*BREAKING CHANGE:* iOS >= 11, Android >= 5
+
 v0.2.11
 --
 

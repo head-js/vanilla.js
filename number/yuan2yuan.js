@@ -1,4 +1,4 @@
-const fen2yuan = require('./fen2yuan');
+const fen2yuan = require('./fen2yuan'); // eslint-disable-line @typescript-eslint/no-var-requires
 
 
 module.exports = function yuan2yuan(yuan) {

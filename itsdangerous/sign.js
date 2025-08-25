@@ -1,4 +1,4 @@
-var forge = require('node-forge');
+var forge = require('node-forge'); // eslint-disable-line @typescript-eslint/no-var-requires
 
 
 // unstable

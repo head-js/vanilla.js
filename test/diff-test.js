@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const diff = require('../compare/diff');
+const expect = require('chai').expect; // eslint-disable-line @typescript-eslint/no-var-requires
+const diff = require('../compare/diff'); // eslint-disable-line @typescript-eslint/no-var-requires
 
 
 describe.only('diff', function () {

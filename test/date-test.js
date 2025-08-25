@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const ts2iso = require('../date/ts2iso');
+const expect = require('chai').expect; // eslint-disable-line @typescript-eslint/no-var-requires
+const ts2iso = require('../date/ts2iso'); // eslint-disable-line @typescript-eslint/no-var-requires
 
 
 describe('date', function () {

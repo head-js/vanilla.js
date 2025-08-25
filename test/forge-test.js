@@ -1,7 +1,7 @@
-const expect = require('chai').expect;
-const encrypt = require('../forge/tdes/encrypt');
-const md5 = require('../forge/md5');
-const sha256 = require('../forge/sha256');
+const expect = require('chai').expect; // eslint-disable-line @typescript-eslint/no-var-requires
+const encrypt = require('../forge/tdes/encrypt'); // eslint-disable-line @typescript-eslint/no-var-requires
+const md5 = require('../forge/md5'); // eslint-disable-line @typescript-eslint/no-var-requires
+const sha256 = require('../forge/sha256'); // eslint-disable-line @typescript-eslint/no-var-requires
 
 
 describe('forge', function () {

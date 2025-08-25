@@ -1,4 +1,4 @@
-var match = require('path-to-regexp').match;
+var match = require('path-to-regexp').match; // eslint-disable-line @typescript-eslint/no-var-requires
 
 
 module.exports = function $match(route, pathname, actions) {

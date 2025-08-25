@@ -1,9 +1,10 @@
 {
   "name": "vanilla.js",
-  "version": "0.2.11",
+  "version": "0.3.0",
   "description": "vanilla.js",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "karma start"
   },
   "repository": {
@@ -21,17 +22,24 @@
   },
   "homepage": "https://github.com/head-js/vanilla.js",
   "devDependencies": {
-    "@babel/core": "7.12.17",
-    "babel-loader": "8.1.0",
+    "@babel/core": "7.24.9",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "babel-loader": "9.1.2",
     "chai": "4.3.0",
+    "eslint": "8.57.1",
+    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-sonarjs": "0.25.1",
     "karma": "5.2.3",
     "karma-chrome-launcher": "3.1.0",
     "karma-mocha": "2.0.1",
     "karma-mocha-reporter": "2.2.5",
     "karma-sourcemap-loader": "0.3.7",
-    "karma-webpack": "4.0.2",
+    "karma-webpack": "5.0.0",
     "mocha": "7.2.0",
-    "node-forge": "0.7.1",
-    "webpack": "4.44.2"
+    "node-forge": "1.0.0",
+    "typescript": "5.2.2",
+    "webpack": "5.90.3"
   }
 }

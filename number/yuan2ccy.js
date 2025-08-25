@@ -7,7 +7,7 @@ var formatter = new Intl.NumberFormat('en-US', {
 });
 
 
-module.exports = function yuan2ccy(yuan, symbol) {
+module.exports = function yuan2ccy(yuan, symbol) { // eslint-disable-line @typescript-eslint/no-unused-vars
   if (!yuan) {
     yuan = 0;
   }

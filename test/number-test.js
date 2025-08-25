@@ -1,7 +1,7 @@
-const expect = require('chai').expect;
-const fen2yuan = require('../number/fen2yuan');
-const yuan2yuan = require('../number/yuan2yuan');
-const yuan2ccy = require('../number/yuan2ccy');
+const expect = require('chai').expect; // eslint-disable-line @typescript-eslint/no-var-requires
+const fen2yuan = require('../number/fen2yuan'); // eslint-disable-line @typescript-eslint/no-var-requires
+const yuan2yuan = require('../number/yuan2yuan'); // eslint-disable-line @typescript-eslint/no-var-requires
+const yuan2ccy = require('../number/yuan2ccy'); // eslint-disable-line @typescript-eslint/no-var-requires
 
 
 describe('number', function () {

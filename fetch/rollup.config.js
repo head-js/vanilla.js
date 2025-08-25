@@ -1,15 +1,9 @@
-import eslint from '@rollup/plugin-eslint';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 
 
 const external = [
-  'core-js/modules/es.object.to-string.js',
-  'core-js/modules/es.promise.js',
-  'core-js/modules/es.array.join.js',
-  'core-js/modules/es.array.map.js',
-  'core-js/modules/es.object.keys.js',
 ];
 
 
@@ -20,8 +14,6 @@ export default [
     external,
 
     plugins: [
-      eslint(),
-
       commonjs({
         sourceMap: false,
       }),
@@ -44,8 +36,6 @@ export default [
     external,
 
     plugins: [
-      eslint(),
-
       commonjs({
         sourceMap: false,
       }),
@@ -68,8 +58,6 @@ export default [
     external,
 
     plugins: [
-      eslint(),
-
       commonjs({
         sourceMap: false,
       }),
@@ -92,8 +80,6 @@ export default [
     external,
 
     plugins: [
-      eslint(),
-
       commonjs({
         sourceMap: false,
       }),
@@ -116,8 +102,6 @@ export default [
     external,
 
     plugins: [
-      eslint(),
-
       commonjs({
         sourceMap: false,
       }),
@@ -140,8 +124,6 @@ export default [
     external,
 
     plugins: [
-      eslint(),
-
       commonjs({
         sourceMap: false,
       }),
